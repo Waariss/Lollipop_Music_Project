@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Welcome to the Family</title><!--Name tittle-->
+        <link rel="stylesheet" type="text/css" href="../css/cssforsong.css"><!--link html with css-->
+        <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet"> <!--link font-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    </head>
+    <body>
+        <script src="https://kit.fontawesome.com/46b381a909.js" crossorigin="anonymous"></script><!--link icon-->
+        <header id="top">
+            <B><h1><i class="fa-solid fa-lollipop"></i> Lollipop Music </h1></B><!--Name in header-->
+        </header>
+        <div class="navbar"><!--Navigation bar-->
+            <nav>
+                <a href="homepage2.html"><i class="fas fa-home"></i> Home</a><!--Home button-->
+                <a href="about.html"><i class="fas fa-info-circle"></i> About</a><!--About button-->
+                <a href="listen3.html"><i class="far fa-play-circle"></i> Listen Now</a><!--listen now button-->
+                <a href="Search.html"><i class="fas fa-search"></i> Search</a><!--Search button-->
+                <a href="Browse.html"><i class="fas fa-list"></i> Browse</a><!--Browse button-->
+                <a href="login2.html"><i class="fas fa-sign-out-alt"></i> Log out</a><!--Log out button-->
+            </nav>
+        </div>
+    <div class="htittle"><!--Sub tittle-->
+        <h1>Welcome to the Family</h1>
+    </div>
+    <!-- <div class="wrapper"> Unnecessary class -->
+        <div class="container"><!--Container for lay out all card-->
+            <div class="card"><!--Each card-->
+                <figure>
+                    <img src="http://localhost:8000/Welcome%20to%20the%20Family.jpg" alt="Profile image"><!--Images-->
+                </figure>
+                <button onclick="justplay()" id="play"><i class="fa fa-play" aria-hidden="true"></i></button><!--play button-->
+                <p class="name">Welcome to the Family</p>
+                <p class="role">Avenged Sevenfold</p>
+                <div class="bar">
+                    <input type="range" min="0" max="100" value="0" id="duration_slider" onchange="change_duration()"><!--Duration bar-->
+                </div>
+                <div class="social-container">
+                    <p class="role">Album: Nightmare</p>
+                </div>
+                <p class="role">Released: 2010</p>
+            </div>
+        </div>
+    <!-- </div> -->
+    <script src="../search.js" ></script>
+    <script >
+        let play = document.querySelector('#play');// call elements from '#play' tag
+        let slider = document.querySelector('#duration_slider');// call elements from '#duration_slider' tag
+        let timer; // Declare variables to set time
+        let index_no = 0; // Declare variables to set number of song
+        let Playing_song = false; // Declare variables for play or pause
+        let track = document.createElement('audio'); //create a audio Element
+        function load_track(index_no){ // function load the track
+            clearInterval(timer);// call variable timer to stop the time
+            reset_slider();// call function
+            track.src = "http://localhost:8000/Welcome%20to%20the%20Family.mp3"; // set path of song
+            timer = setInterval(range_slider ,1000); // set to silder duration bar
+        }
+        load_track(index_no); // call function load_track
+        function justplay(){ // function to checking the song is playing or not
+        if(Playing_song==false){ 
+            playsong();
+        }else{
+            pausesong();
+            }
+        }
+        // function to for reset song slider
+        function reset_slider(){
+        slider.value = 0; // Declare variables to set silder value
+        }
+        //function to play song
+        function playsong(){
+            track.play();
+            Playing_song = true; // set to true when play
+            play.innerHTML = '<i class="fa fa-pause" aria-hidden="true"></i>'; // set icon 
+        }
+        //function to pause song
+        function pausesong(){
+            track.pause();
+            Playing_song = false; // set to false when pause
+            play.innerHTML = '<i class="fa fa-play" aria-hidden="true"></i>'; // set icon 
+        }
+        // function to change slider position
+        function change_duration(){
+            slider_position = track.duration * (slider.value / 100);
+            track.currentTime = slider_position; // set currentTime to when user skip time songs
+        }
+        function range_slider(){ // function to update slider position
+        let position = 0; // Declare variables to set position value
+            if((track.duration)!=0){ // if track song is not 0 run this condition
+		        position = track.currentTime * (100 / track.duration);
+                slider.value =  position; // set silder value to position that song are running
+            }
+        }
+    </script>
+    </body>
+</html>
