@@ -2,10 +2,10 @@
 Project ITCS212_Web Programming at Faculty of Information and Communication Technology (ICT Mahidol).
 For this project to design and develop about Lollipop Music.
 
-## Our Member Team ID: 120 Useless
+#### Our Member Team ID: 120 Useless
 
 # Read this important part!
-# For LOLLIPOP MUSIC 
+## For LOLLIPOP MUSIC 
 requirements
 
 -Node.js "https://nodejs.org/en/download/"
@@ -26,7 +26,7 @@ Set up steps.
 
 6. Go to this url: "http://localhost:7000/", click login, and type in the Email ID box "Test@hotmail.com" and type in the password box "Test" to connect to our webpage.
 
-# For LOLLIPOP ADMIN
+## For LOLLIPOP ADMIN
 requirements
 
 -Node.js "https://nodejs.org/en/download/"
