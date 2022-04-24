@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Result</title><!--Name tittle-->
+        <link rel="stylesheet" href="../css/result.css">
+        <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet"> <!--link font-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <script src="https://kit.fontawesome.com/46b381a909.js" crossorigin="anonymous"></script><!--link icon-->
+        <header id="top">
+            <B><h1><i class="fa-solid fa-lollipop"></i> Lollipop Music </h1></B><!--Name in header-->
+        </header>
+        <div class="navbar"><!--Navigation bar-->
+
+                <a href="../../homepage2"><i class="fas fa-home"></i> Home</a><!--Home button-->
+                <a href="../../about"><i class="fas fa-info-circle"></i> About</a><!--About button-->
+                <a href="../../listen3"><i class="far fa-play-circle"></i> Listen Now</a><!--listen now button-->
+                <a href="../../Search"><i class="fas fa-search"></i> Search</a><!--Search button-->
+                <a href="../../Browse"><i class="fas fa-list"></i> Browse</a><!--Browse button-->
+                <a href="../../"><i class="fas fa-sign-out-alt"></i> Log out</a><!--Log out button-->
+        </div>
+    <!-- <div class="wrapper"> Unnecessary class -->
+        <div class="subtitle">
+            <h1>Result</h1>
+        </div>
+        <table class="content-table">
+            <thead>
+                <tr>
+                <th>#</th>
+                <th>Title</th>
+                <th>Artist</th>
+                <th>Album</th>
+                <th>Released</th>
+                <th>Categories</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each music}}
+                    <tr data-href="http://localhost:7000/Search/all/{{this.artist}}">
+                    <td>{{this.id}}</td>
+                    <td>{{this.song}}</td>
+                    <td>{{this.artist}}</td>
+                    <td>{{this.album}}</td>
+                    <td>{{this.released}}</td>
+                    <td>{{this.pages}}</td>
+                    </tr>
+                {{/each}}
+            </tbody>
+        </table>
+        <script>
+            document.addEventListener("DOMContentLoaded",() =>{
+                const rows = document.querySelectorAll("tr[data-href]");
+                rows.forEach(row =>{
+                    row.addEventListener("click", ()=>{
+                        window.location.href = row.dataset.href;
+                    });
+                });
+            });
+        </script>
+    <!-- </div> -->
+    </body>
+</html>

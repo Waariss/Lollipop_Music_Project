@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="../css/login2c.css"><!--link html with css-->
+      <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet"> <!--link font-->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script><!--link html with jQuery for can click button to hide content that user ignores out and show content that user want-->
+      <title>Login Form</title><!--Name tittle-->
+    </head>
+    <body>
+      <div class="container"><!--Container for all lay out-->
+        <div class="form"><!--Class for form--->
+          <div class="btn"><!--Class for button-->
+            <button class="signUpBtn">SIGN UP</button><!--Button SIGN UP-->
+            <button class="loginBtn">LOG IN</button><!--Button LOG IN-->
+            <button class="forgetBtn">FORGOT PASSWORD</button><!--Button FORGOT PASSWORD-->
+          </div>
+          <form class="signUp" action="" method="get"><!--Class for signUp content-->
+            <div class="formGroup">
+              <input type="text" id="userName" placeholder="FullName" required autocomplete="off"><!--Create username input box-->
+            </div>
+            <div class="formGroup">
+              <input type="email" placeholder="Email ID" name="email" required autocomplete="off"><!--Create Email input box-->
+            </div>
+            <div class="formGroup">
+              <input type="date" id="Birthdate" placeholder="mm/dd/yyyy" required autocomplete="off"><!--Create confirmPassword input box-->
+            </div>
+            <div class="formGroup">
+              <input type="password" id="password" placeholder="Password" required autocomplete="off"><!--Create Password input box-->
+            </div>
+            <div class="checkBox"><!--Class for checkBox-->
+              <input type="checkbox" name="checkbox" id="checkbox"><!--Create checkBox-->
+            <span class="text">I agree with term & conditions</span>
+            </div>
+            <div class="formGroup">
+              <button type="button" class="btn6">REGISTER</button><!--Create REGISTER button-->
+            </div>
+          </form>
+          <form class="login" action="http://localhost:7000/auth" method="post"><!--Class for login content-->
+            <div class="formGroup">
+              <input type="email" placeholder="Email ID" name="email" required autocomplete="off"><!--Create Email input box-->
+            </div>
+            <div class="formGroup">
+              <input type="password" id="pword" name ="pword"placeholder="Password" required autocomplete="off"><!--Create Password input box-->
+            </div>
+            <div class="checkBox"><!--Class for checkBox-->
+              <input type="checkbox" name="checkbox" id="checkbox"><!--Create checkBox-->
+              <span class="text">Keep me signed in on this device</span>
+            </div>
+            <div class="formGroup">
+              <button type="submit" value="Submit" class="btn2">LOGIN</button><!--Create LOGIN button and click to homepage.html-->
+            </div>
+          </form>
+          <form class="forget" action="#" method="get"><!--Class for forget content-->
+            <div class="formGroup">
+              <input type="email" placeholder="Email ID" name="email" required autocomplete="off"><!--Create Email input box-->
+            </div>
+            <div class="formGroup">
+              <input type="password" id="password" placeholder="New Password" required autocomplete="off"><!--Create Password input box-->
+            </div>
+            <div class="checkBox">
+              <input type="checkbox" name="checkbox" id="checkbox"><!--Create checkBox-->
+              <span class="text">You are not robot</span>
+            </div>
+            <div class="formGroup">
+              <button type="button" class="btn6"><a href="">RESET</a></button><!--Create RESET button-->
+            </div>
+          </form>
+        </div>
+      </div>
+      <script src= "../login.js"></script>
+      <script>
+        /* When click login button will run function */
+        /* This function make to click '.loginBtn' will be back to log in form and will show border line in '.loginBtn' and remove all line in another button*/
+        $('.loginBtn').click(function(){
+          $('.login').show();/* Show login form */
+          $('.signUp').hide();/* Hide sign up form */
+          $('.forget').hide();/* Hide forget  form */
+          $('.loginBtn').css({'border-bottom' : '2px solid #fdc600'}); /* When click log in button will show border-bottom under log in button*/
+          $('.signUpBtn').css({'border-style' : 'none'}); /* Then remove all border-bottom before*/
+          $('.forgetBtn').css({'border-style' : 'none'}); /* Then remove all border-bottom before*/
+        });
+        /* When click sign up button will run function */
+        /* This function make to click '.signUpBtn' will be back to log in form and will show border line in '.signUpBtn' and remove all line in another button*/
+        $('.signUpBtn').click(function(){
+          $('.login').hide();/* Hide login form */
+          $('.signUp').show();/* Show sign up form */
+          $('.forget').hide();/* Hide forget  form */
+          $('.signUpBtn').css({'border-bottom' : '2px solid #fdc600'}); /* When click sign up button will show border-bottom under sign up button*/ 
+          $('.loginBtn').css({'border-style' : 'none'}); /* Then remove all border-bottom before*/
+          $('.forgetBtn').css({'border-style' : 'none'}); /* Then remove all border-bottom before*/
+        });
+        /* When click button6 will run function */
+        /* This function make to click 'REGISTER' and 'RESET' will be back to log in form and will show border line in '.loginBtn' and remove all line in another button*/
+        $('.btn6').click(function(){
+          $('.login').show();/* Show login form */
+          $('.signUp').hide();/* Hide sign up form */
+          $('.forget').hide();/* Hide forget  form */
+          $('.loginBtn').css({'border-bottom' : '2px solid #fdc600'}); /* When click log in button will show border-bottom under log in button*/ 
+          $('.signUpBtn').css({'border-style' : 'none'}); /* Then remove all border-bottom before*/
+          $('.forgetBtn').css({'border-style' : 'none'}); /* Then remove all border-bottom before*/
+        });
+        /* When click forget button will run function */
+        /* This function make to click '.forgetBtn' will be back to log in form and will show border line in '.forgetBtn' and remove all line in another button*/
+        $('.forgetBtn').click(function(){
+          $('.login').hide();/* Hide login form */
+          $('.signUp').hide();/* Hide sign up form */
+          $('.forget').show();/* Showforget  form */
+          $('.forgetBtn').css({'border-bottom' : '2px solid #fdc600'});/* When click forget button will show border-bottom under forget button*/ 
+          $('.loginBtn').css({'border-style' : 'none'}); /* Then remove all border-bottom before*/
+          $('.signUpBtn').css({'border-style' : 'none'}); /* Then remove all border-bottom before*/
+        });
+      </script>
+    </body>
+</html>

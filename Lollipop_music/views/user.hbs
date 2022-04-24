@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        {{#each data}}
+          <title>{{this.Uid}}</title><!--Name tittle-->
+        {{/each}}
+        <link rel="stylesheet" href="../css/cssforsong.css">
+        <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet"> <!--link font-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    </head>
+    <body>
+        <script src="https://kit.fontawesome.com/46b381a909.js" crossorigin="anonymous"></script><!--link icon-->
+        <header id="top">
+            <B><h1><i class="fa-solid fa-lollipop"></i> Lollipop Music </h1></B><!--Name in header-->
+        </header>
+        <div class="navbar"><!--Navigation bar-->
+            <nav>
+                <a href="../../homepage2"><i class="fas fa-home"></i> Home</a><!--Home button-->
+                <a href="../../about"><i class="fas fa-info-circle"></i> About</a><!--About button-->
+                <a href="../../listen3"><i class="far fa-play-circle"></i> Listen Now</a><!--listen now button-->
+                <a href="../../Search"><i class="fas fa-search"></i> Search</a><!--Search button-->
+                <a href="../../Browse"><i class="fas fa-list"></i> Browse</a><!--Browse button-->
+                <a href="../../"><i class="fas fa-sign-out-alt"></i> Log out</a><!--Log out button-->
+            </nav>
+        </div>
+    <div class="htittle"><!--Sub tittle-->
+        {{#each data}}
+          <h1>{{this.fullname}}</h1>
+        {{/each}}
+    </div>
+    <!-- <div class="wrapper"> Unnecessary class -->
+        <div class="container"><!--Container for lay out all card-->
+            <div class="card"><!--Each card-->
+                {{#each data}}
+                  <figure>
+                      <img src="http://localhost:8000/user.jpg" alt="Profile image"><!--Images-->
+                  </figure>
+                <h5><p class="name">{{this.email}}</p></h5>
+                <h4><p class="role">User Information</p></h4>
+                <p class="role">Fullname: {{this.fullname}}</p>
+                <p class="role">Password: {{this.pword}}</p>
+                <div class="social-container">
+                    <p class="role">Tel. number: {{this.tel}}</p>
+                </div>
+                <p class="role">Roles: {{this.roles}}</p>
+                {{/each}}
+            </div>
+        </div>
+    <!-- </div> -->
+    </body>
+</html>

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Search</title><!--Name tittle-->
+        <link rel="stylesheet" href="../css/Searchc.css"><!--link html with css-->
+        <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet"> <!--link font-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    </head>
+        <body>
+            <script src="https://kit.fontawesome.com/46b381a909.js" crossorigin="anonymous"></script><!--link icon-->
+            <header id="top">
+                <B><h1><i class="fa-solid fa-lollipop"></i> Lollipop Music </h1></B><!--Name in header-->
+            </header>
+            <div class="htittle"><!--Sub tittle-->
+                <h1>Search</h1>
+            </div>
+            <div class="navbar"><!--Navigation bar-->
+                <nav>
+                    <a href="homepage2"><i class="fas fa-home"></i> Home</a><!--Home button-->
+                    <a href="about"><i class="fas fa-info-circle"></i> About</a><!--About button-->
+                    <a href="listen3"><i class="far fa-play-circle"></i> Listen Now</a><!--listen now button-->
+                    <a href="Browse"><i class="fas fa-list"></i> Browse</a><!--Browse button-->
+                    <a href="/"><i class="fas fa-sign-out-alt"></i> Log out</a><!--Log out button-->
+                </nav>
+            </div>
+            <div class="wrapper"><!--Class for area of search box-->
+                <div class="search-input"><!--Class for search box-->
+                    <a href="" target="_blank" hidden></a><!--Making search icon can click-->
+                    <input type="text" placeholder="Type to search Song or Categories"><!--Search box for input-->
+                    <div class="autocom-box"><!-- here list are inserted from javascript --></div>
+                    <div class="icon"><!--Class for icon-->
+                        <i class="fas fa-search"></i>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="box"> Unnecessary class-->
+                <div class="container"><!--Container for lay out all card-->
+                    <div class="card"><!--Each card-->
+                        <figure>
+                            <a href="Rock"><img src="http://localhost:8000/rock.jpg" alt="Profile image"></a><!--Images-->
+                        </figure>
+                        <p class="name"> Rock</p>
+                        <div class="separator"></div><!--Color bar-->
+                    </div>
+                    <div class="card">
+                        <figure>
+                            <a href="Pop"><img src="http://localhost:8000/pop.jpg" alt="Profile image"></a><!--Images-->
+                        </figure>
+                        <p class="name">Pop</p>
+                        <div class="separator"></div><!--Color bar-->
+                    </div>
+                    <div class="card">
+                        <figure>
+                            <a href="Indie"><img src="http://localhost:8000/indie.jpg" alt="Profile image"></a><!--Images-->
+                        </figure>
+                        <p class="name">Indie</p>
+                        <div class="separator"></div><!--Color bar-->
+                    </div>
+                    <div class="card">
+                        <figure>
+                            <a href="Kpop"><img src="http://localhost:8000/kpop.jpg" alt="Profile image"></a><!--Images-->
+                        </figure>
+                        <p class="name">K-Pop</p>
+                        <div class="separator"></div><!--Color bar-->
+                    </div>
+                    <div id = "output"></div>
+                </div>
+            <!-- </div> -->
+            <!-- <script src= "../query.js"></script> -->
+            <script>
+                // use for search autocomplete
+                const searchWrapper = document.querySelector(".search-input"); // call elements from ".search-input"
+                const inputBox = searchWrapper.querySelector("input");// call elements from "input" in searchWrapper
+                const suggBox = searchWrapper.querySelector(".autocom-box");// call elements from ".autocom-box" in searchWrapper
+                const icon = searchWrapper.querySelector(".icon");// call elements from ".icon" in searchWrapper
+                let linkTag = searchWrapper.querySelector("a");// call elements from "a" in searchWrapper
+                let suggestions = [ // Declare variables array of suggestions
+                    "Fetal Attraction",
+                    "Up to me",
+                    "Califonication",
+                    "Deja vu",
+                    "Girls",
+                    "Bite me",
+                    "Level of concern",
+                    "Welcome to the Family",
+                    "Here Comes The Sun",
+                    "Please Mr Postman",
+                    "Getting Over You",
+                    "Light Switch",
+                    "How to get the girl",
+                    "SUNRISE",
+                    "Wildfires",
+                    "Runaway",
+                    "Spring Day",
+                    "Lucid Dream",
+                    "All I Wanna Do",
+                    "MS.winter",
+                    "home.(ดูดฝุ่น)",
+                    "Avril Lavigne",
+                    'BTS',
+                    'EXO',
+                    'OLIVIA RODRIGO',
+                    'LAUV',
+                    'TWENTY ONE PILOTS',
+                    'JAY PARK',
+                    'CHARLIE PUTH',
+                    'AESPA',
+                    'IMHAVINGABADDAY.',
+                    'Reality Club',
+                    'Sault',
+                    'CARPENTERS',
+                    'Beatles',
+                    'MICHELLE',
+                    'The 1975',
+                    'RED HOT CHILI PEPPERS',
+                    'Avenged Sevenfold',
+                    'LANY',
+                    'Taylor Swift',
+                    'Morvasu x Violette Wautier',
+                    'LOVE SUX',
+                    'YOU NEVER WALK ALONE',
+                    'SOUR',
+                    'MET YOU WHEN I WAS 18',
+                    'Level of Concern',
+                    'LIGHT SWITCH',
+                    'SAVAGE',
+                    'MS. WINTER',
+                    'Never Get Better',
+                    'Untitled (Black Is)',
+                    'HORIZON',
+                    'Abbey Road',
+                    'SUNRISE',
+                    'The 1975',
+                    'CALIFORNICATION',
+                    'Nightmare',
+                    'GG BB XX',
+                    '1989',
+                    'Morvasu x Violette Wautier'
+                ];
+                // if user press any key and release
+                inputBox.onkeyup = (e)=>{
+                    let userData = e.target.value; //user enetered data
+                    let emptyArray = []; // Declare empty array
+                    // if user input any data
+                    if(userData){
+                        icon.onclick = ()=>{ // user click on button search
+                        linkTag.setAttribute("href", `search/all/${userData}`);// set Attribute of href = userdata.html
+                        linkTag.click();// When click on linkTag(icon search)
+                        }
+                        emptyArray = suggestions.filter((data)=>{ // filter to check emptyArray matching data
+                            return data.toLocaleLowerCase().startsWith(userData.toLocaleLowerCase()); //filtering array value and user characters to lowercase and return only those words which are start with user enetered chars
+                        });
+                        emptyArray = emptyArray.map((data)=>{ // map data to  emptyArray 
+                            return data = `<li>${data}</li>`; // passing return data inside li tag
+                        });
+                        searchWrapper.classList.add("active"); //show autocomplete box
+                        showSuggestions(emptyArray);// show Suggestions list with emptyArray
+                        let allList = suggBox.querySelectorAll("li");// Select all elements with il in suggBox
+                        for (let i = 0; i < allList.length; i++) {
+                            allList[i].setAttribute("onclick", "select(this)");  //adding onclick attribute in all li tag
+                        }
+                    }else{
+                        searchWrapper.classList.remove("active"); //hide autocomplete box
+                    }
+                }
+                icon.onclick = () =>{
+                    linkTag.setAttribute("href", `/search/lollipop`);// set Attribute of href = userdata.html
+                    linkTag.click();// When click on linkTag(icon search)  
+                }
+                function select(element){ // function to select element
+                    inputBox.value = element.textContent
+                    let str = inputBox.value
+                    if(str.indexOf(' ') >= 0){
+                        str = str.substring(0, str.indexOf(" "));
+                    }
+                    else{
+                        let str = inputBox.value
+                    }
+                    icon.onclick = ()=>{ // user click on button search
+                        linkTag.setAttribute("href", `search/all/${str}`);// set Attribute of href = inputBox.value.html
+                        linkTag.click();// When click on linkTag(icon search)
+                    }
+                    searchWrapper.classList.remove("active"); //hide autocomplete box
+                }
+                // function to show Suggestions list
+                function showSuggestions(list){ // function to showSuggestions in list
+                    let listData; // Declare variables
+                    if(list.length){ // if list matching 
+                        listData = list.join('');// move listData join in list
+                    }
+                    else{
+                        listData = ``; // list no matching make null 
+                    }
+                    suggBox.innerHTML = listData; //Change the HTML content of suggBox to listData
+                }
+            </script>
+        </body>
+</html>

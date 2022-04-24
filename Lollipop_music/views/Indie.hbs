@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Indie</title><!--Name tittle-->
+        <link rel="stylesheet" href="../css/cssforcat.css"><!--link html with css-->
+        <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet"> <!--link font-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    </head>
+        <body>
+            <script src="https://kit.fontawesome.com/46b381a909.js" crossorigin="anonymous"></script><!--link icon-->
+            <header>
+                <B><h1><i class="fa-solid fa-lollipop"></i> Lollipop Music </h1></B><!--Name in header-->
+            </header>
+            <div class="htittle"><!--Sub tittle-->
+                <h1>Indie</h1>
+            </div>
+            <div class="navbar"><!--Navigation bar-->
+                <nav>
+                    <a href="homepage2"><i class="fas fa-home"></i> Home</a><!--Home button-->
+                    <a href="about"><i class="fas fa-info-circle"></i> About</a><!--About button-->
+                    <a href="listen3"><i class="far fa-play-circle"></i> Listen Now</a><!--listen now button-->
+                    <a href="Search"><i class="fas fa-search"></i> Search</a><!--Search button-->
+                    <a href="Browse"><i class="fas fa-list"></i> Browse</a><!--Browse button-->
+                    <a href="/"><i class="fas fa-sign-out-alt"></i> Log out</a><!--Log out button-->
+                </nav>
+            </div>
+            <!-- <div class="wrapper"> Unnecessary class -->
+                <div class="container"><!--Container for lay out all card-->
+                    {{#each indie}}
+                    <div class="card"><!--Each card-->
+                        <figure>
+                            <img src="{{this.imgurl}}" alt="Profile image"><!--Images-->
+                        </figure>
+                        <a href="http://localhost:7000/search/all/{{this.artist}}"><p class="name">{{this.song}}</p></a>
+                        <p class="role">{{this.artist}}</p>
+                        <div class="separator"></div><!--Color bar-->
+                        <div class="social-container">
+                            <p class="role">Album: {{this.album}}</p>
+                        </div>
+                        <p class="role">{{this.released}}</p>
+                    </div>
+                    {{/each}}
+                </div>
+            <!-- </div> -->
+        </body>
+</html>
+        

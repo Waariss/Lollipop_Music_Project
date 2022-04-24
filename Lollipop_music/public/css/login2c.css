@@ -1,0 +1,121 @@
+/* whole page */
+* {
+  margin     : 0;
+  padding    : 0;
+  box-sizing : border-box;
+  font-family: 'Varela Round', sans-serif;
+}
+/* body of page */
+body{
+  background-color: #5085a5;
+}
+/*text in button*/
+a{
+  text-decoration: none;
+  color          : white;
+}
+/* Set all form into center*/
+.container{
+  display        : flex;
+  justify-content: center;
+  align-items    :center;
+  height         : 100vh;
+}
+/* Design all form */
+.form{
+  width           : 500px;
+  height          : 450px;
+  background-color: #2e3033;
+  box-shadow      : 0 5px 30px #100e16;
+  border-radius   : 25px;
+}
+/* Design button */
+.btn button {
+  padding         : 3px;
+  margin          : 30px 0px 40px 30px;
+  border-style    : none;
+  background-color: transparent;
+  color           : beige;
+  font-size       : 18px;
+  font-weight     : 550;
+}
+/* Set all formGroup into center*/
+.formGroup{
+  display        : flex;
+  justify-content: center;
+}
+/* Design text input in formGroup */
+.formGroup input{
+  border          : none;
+  width           : 80%;
+  border-bottom   : 2px solid white;
+  padding         : 10px;
+  margin-bottom   : 20px;
+  font-size       : 14px;
+  font-weight     : bold;
+  background-color: transparent;
+  color           : white;
+}
+/* Design text input when focus */
+input:focus {
+  outline      : none;
+  border-bottom: 2px solid #00aaff;
+  font-size    : 17px;
+  font-weight  : bold;
+  color        : white;
+}
+/* Set placeholder white color*/
+::placeholder {
+  color: white;
+}
+/* Set checkBox*/
+.checkBox{
+  display        : flex;
+  justify-content: center;
+  margin         : 16px;
+}
+/* Set checkBox*/
+#checkbox{
+  margin-right: 10px;
+  height      : 15px;
+  width       : 15px;
+}
+/* Set color and size text*/
+.text{
+  color    : rgb(199, 197, 197);
+  font-size: 13px;
+}
+/* Design button 2,6 */
+.btn2,.btn6{
+  padding         : 10px;
+  width           : 150px;
+  border-radius   : 20px;
+  background-color: #00aaff;
+  border-style    : none;
+  color           : white;
+  font-weight     : 600;
+}
+/*when hover button 2,6 */
+.btn2:hover,.btn6:hover{
+  background-color: #fdc600;
+}
+/*when hover button 2,6 make border line*/
+.btn button:hover,.btn6 button:hover{
+  border-bottom: 2px solid #fdc600;
+}
+/* hide login and forget form */
+.login,.forget{
+  display: none;
+}
+/* set login and forget form */
+.login,.forget{
+  margin-top: 40px;
+}
+/* set login and forget checkbox*/
+.login .checkBox,.forget .checkBox{
+  margin-top: 30px;
+}
+/*Change icon calendar*/
+::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+}
