@@ -1,0 +1,132 @@
+/* whole page */
+*{  
+    margin     : 0;
+    padding    : 0;
+    box-sizing : border-box;
+    font-family: 'Varela Round', sans-serif;
+    color      : #bbb;
+  }
+  /* Design header */
+  header{
+    text-align : left;
+    padding    : 15px;
+    font-weight: bold;
+    background : #fdc600;
+    font-size  : 25px;
+  }
+  /* text in header */
+  header h1{
+    color: #00aaff;
+  }
+  /* navigation bar */
+  .navbar{
+    background-color: #333;
+    overflow        : hidden;
+    position        : fixed;
+    bottom          : 0;
+    width           : 100%;
+  }
+  /* text in navigation bar */
+  .navbar a{
+    float          : left;
+    display        : block;
+    color          : #f2f2f2;
+    text-align     : center;
+    padding        : 14px 16px;
+    text-decoration: none;
+    font-size      : 17px;
+  }
+  /* when hover text in navigation bar */
+  .navbar a:hover{
+    background-color: #ddd;
+    color           : black;
+  }
+  /* body of page */
+  body{
+    width           : 100%;
+    min-height      : 100vh;
+    background-color: #100e16;
+    flex-direction  : column;
+    justify-content : center;
+    align-items     : center;
+  }
+  /* lay out of subtittle */
+  .htittle h1{
+    color         : rgb(255, 255, 255);
+    text-align    : center;
+    margin-top    : 15px;
+    padding       : 80px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size     : 3.5em;
+    margin-bottom : 0px;
+    font-weight   : bold;
+  }
+  /* lay out of container to set all card in center */
+  .container{
+    position        : relative;
+    display         : flex;
+    flex-direction  : row;
+    justify-content : center;
+    align-items     : center;
+  }
+  /* lay out of card */
+  .card{
+    position        : relative;
+    background-color: #1a1720;
+    height          : 550px;
+    width           : 550px;
+    border-radius   : 12px;
+    box-shadow      : -16px 0 48px #000;
+    left            : 0;
+    margin-left     : -5px;
+    display         : flex;
+    flex-direction  : column;
+    justify-content : center;
+    align-items     : center;
+    transition      : 0.4s;
+  }
+  /* layout images */
+  figure{
+    position       : relative;
+    width          : 350px;
+    height         : 350px;
+    border-radius  : 50%;
+    overflow       : hidden;
+    margin-bottom  : 24px;
+    display        : flex;
+    justify-content: center;
+    align-items    : center;
+    box-sizing     : border-box;
+    background     : linear-gradient(to top,#009ad9, #ffba00);
+    /* background: #00adfd; */
+  }
+  /*images */
+  figure img{
+    width     : 100%;
+    height    : 100%;
+    transition: 0.4s;
+  }
+  /* name */
+  .name{
+    font-size    : 1.3em;
+    margin-bottom: 8px;
+  }
+  /* when hover over the card */
+  .card:hover{
+    transform : translateY(-15px);
+    transition: 0.4s;
+  }
+  /* make card move into left when hover */
+  .card:hover~.card{
+    left      : 40px;
+    transition: 0.4s;
+  }
+  /* when hover over the images will opacity*/
+  .card:hover figure img{
+    opacity: 0.75;
+  }
+  /* when hover card will white color */
+  .card:hover *{
+    color: #fff;
+  }

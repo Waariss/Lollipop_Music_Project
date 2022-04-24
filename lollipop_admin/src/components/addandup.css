@@ -1,0 +1,98 @@
+.sidebareiei2 h1 {
+    margin-top: 30px;
+    text-align : center;
+    color: rgb(20, 145, 255);
+    font-size  : 60px;
+    margin-bottom: 5px;
+}
+.yeast{
+    text-align : left;
+    padding    : 12px;
+    font-weight: bold;
+    background : #fdc600;
+    font-size  : 30px;
+}
+.yeast h1{
+    color: #00aaff;
+}
+.container2{
+    position        : relative;
+    display         : flex;
+    flex-direction  : row;
+    justify-content : center;
+    align-items     : center;
+    margin-top: 15px;
+  }
+  /* lay out of card */
+.card2{
+    position        : relative;
+    background-color: #1a1720;
+    height          : 600px;
+    width           : 750px;
+    border-radius   : 12px;
+    box-shadow      : -16px 0 48px #000;
+    left            : 0;
+    margin-left     : 0px;
+    display         : flex;
+    flex-direction  : column;
+    justify-content : center;
+    align-items     : center;
+    transition      : 0.4s;
+}
+Form.Group{
+    text-align: left;
+    margin-left:-100px;
+}
+Form.Label{
+    margin-bottom:150px
+}
+.label{
+    color: #00aaff;
+    font-weight: bold;
+    font-size: 25px;
+    Position: relative;
+    left:-180px;
+    margin-bottom:150px
+}
+.delete3{
+    background-color: #00aaff;
+    border: 10px solid transparent;
+    border-radius: .90rem;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    flex: 0 0 auto;
+    font-family: "Inter var",ui-sans-serif,system-ui,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    font-size: 1.125rem;
+    font-weight: 500;
+    line-height: 1.5rem;
+    padding: 8px 8px;
+    text-align: center;
+    text-decoration: none #6B7280 solid;
+    text-decoration-thickness: auto;
+    transition-duration: .2s;
+    transition-property: background-color,border-color,color,fill,stroke;
+    transition-timing-function: cubic-bezier(.4, 0, 0.2, 1);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: auto;
+    margin-top: 2px;
+}
+.delete3:hover {
+    background-color: #374151;
+}
+.delete3:focus {
+    box-shadow: none;
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+}
+.box {
+    margin-top:-50px;
+    background: rgb(255, 213, 85);
+    font-size: 0.4cm;
+    color: #1a1720;
+    align-items: left;
+    Position: relative;
+    left:-180px;
+}
