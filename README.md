@@ -26,6 +26,7 @@ Set up steps.
 
 # For LOLLIPOP ADMIN
 requirements
+
 -Node.js "https://nodejs.org/en/download/"
 
 -MySQL to run our database file in the folder "Database", where "sec1_gr11_database.sql" is the schema and "lollipop.sql" is the database.
