@@ -1,54 +1,59 @@
 # Lollipop_Music_Project
-Project ITCS212_Web Programming at Faculty of Information and Communication Technology (ICT Mahidol).
-For this project to design and develop about Lollipop Music.
 
-#### Our Member Team ID: 120 Useless
+This project is a part of ITCS212_Web Programming at the Faculty of Information and Communication Technology (ICT Mahidol). It aims to design and develop a music application named "Lollipop Music".
 
-# Read this important part!
-## For LOLLIPOP MUSIC 
-requirements
+#### Team ID: 120 - Useless
 
--Node.js "https://nodejs.org/en/download/"
+---
 
--MySQL to run our database file in the folder "Database", where "sec1_gr11_database.sql" is the schema and "lollipop.sql" is the database.
+## Introduction
 
-Set up steps.
+I successfully designed and developed a project focused on creating a music application called Lollipop Music using React and Node.js. With a passion for music and technology, I utilized my skills to design an intuitive and user-friendly interface for browsing and playing music. Leveraging React for the frontend and Node.js for the backend, I implemented key features such as user authentication, playlist management, and audio playback. This project deepened my knowledge of web development, strengthened my skills in React and Node.js, and demonstrated my ability to create engaging and functional music applications. I'm excited to have contributed to the world of music through technology!
 
-1. Save this project to your computer.
+---
 
-2. Launch the Command Prompt and go to the LOLLIPOP MUSIC directory.
+## Installation and Setup
 
-3. Run "npm init."
+### Prerequisites
+- [Node.js](https://nodejs.org/en/download/)
+- MySQL - Run our database files located in the "Database" folder. The "sec1_gr11_database.sql" is the schema and "lollipop.sql" is the database.
 
-4. Run "npm install pm2-g," "npm install cors," "npm install dotenv --save," "npm install express," "npm install express-handlebars," "npm install express-validator," "hbs," "mysql2," and "npm install nodemon."
+### For LOLLIPOP MUSIC
 
-5. Execute "pm2 start lollipop_resource.js" and "pm2 start lollipop_server.js".
+1. Clone or save this project to your computer.
+2. Open the Command Prompt and navigate to the LOLLIPOP MUSIC directory.
+3. Initialize the project with `npm init`.
+4. Install the necessary packages:
+    ```bash
+    npm install pm2 -g cors dotenv express express-handlebars express-validator hbs mysql2 nodemon
+    ```
+5. Start the server with:
+    ```bash
+    pm2 start lollipop_resource.js
+    pm2 start lollipop_server.js
+    ```
+6. Access the application in your browser at [http://localhost:7000/](http://localhost:7000/). Click login, and use the credentials:
+    - Email ID: `Test@hotmail.com`
+    - Password: `Test`
 
-6. Go to this url: "http://localhost:7000/", click login, and type in the Email ID box "Test@hotmail.com" and type in the password box "Test" to connect to our webpage.
+### For LOLLIPOP ADMIN
 
-## For LOLLIPOP ADMIN
-requirements
+1. Ensure you have LOLLIPOP MUSIC included in your project files.
+2. Navigate to the LOLLIPOP MUSIC directory and start the necessary servers:
+    ```bash
+    pm2 start lollipop_resource.js
+    pm2 start admin.js
+    pm2 start lollipop_server.js
+    ```
+3. Navigate to the Project1 directory.
+4. Create a new React app with `npx create-react-app lollipop_admin`.
+5. Move files inside the `lollipop_admin` folder into your new react folder.
+6. Install the necessary React packages:
+    ```bash
+    npm install axios react-bootstrap bootstrap react-icons react-router-dom react-scripts styled-components
+    ```
+7. Start the React application with `npm start`.
 
--Node.js "https://nodejs.org/en/download/"
+---
 
--MySQL to run our database file in the folder "Database", where "sec1_gr11_database.sql" is the schema and "lollipop.sql" is the database.
-
--LOLLIPOP MUSIC that include in our project files already.
-
-Set up steps.
-
-1. Save this project to your computer.
-
-2. Launch the Command Prompt and go to the LOLLIPOP MUSIC directory.
-
-3. Execute "pm2 start lollipop_resource.js", "pm2 start admin.js",and "pm2 start lollipop_server.js".
-
-4. Launch the Command Prompt and go to the Project1 directory.
-
-5. Run "npx create-react-app lollipop_admin"
-
-6. Move files inside lollipop_admin folder into your new react folder.
-
-7. Execute "npm i axios," "npm install react-bootstrap bootstrap," "npm install react-icons --save," "npm i react-router-dom," "npm i react-scripts,"and "nnpm i styled-components"
-
-8. Execute "npm start"
+We hope you enjoy the Lollipop Music experience!
