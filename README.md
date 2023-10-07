@@ -1,13 +1,29 @@
-# Lollipop_Music_Project
-
-This project is a part of ITCS212_Web Programming at the Faculty of Information and Communication Technology (ICT Mahidol). It aims to design and develop a music application named "Lollipop Music".
-
-#### Team ID: 120 - Useless
-
----
+# Lollipop Music Project
 
 ## Introduction
 
-I successfully designed and developed a project focused on creating a music application called Lollipop Music using React and Node.js. With a passion for music and technology, I utilized my skills to design an intuitive and user-friendly interface for browsing and playing music. Leveraging React for the frontend and Node.js for the backend, I implemented key features such as user authentication, playlist management, and audio playback. This project deepened my knowledge of web development, strengthened my skills in React and Node.js, and demonstrated my ability to create engaging and functional music applications. I'm excited to have contributed to the world of music through technology!
+Lollipop Music is a music application developed as part of the ITCS212_Web Programming project at the Faculty of Information and Communication Technology, ICT Mahidol. This application was developed with a keen interest in music and technology, utilizing React for the frontend and Node.js for the backend. Lollipop Music features a user-friendly interface, user authentication, playlist management, and audio playback.
 
-We hope you enjoy the Lollipop Music experience!
+**Team ID**: 120 - Useless
+
+Enjoy the rhythm with Lollipop Music!
+
+## Hosting Details
+
+Lollipop Music is hosted on Amazon EC2, providing a reliable and scalable platform to ensure a smooth and uninterrupted user experience.
+
+**Access the application**: [http://47.128.71.255/](http://47.128.71.255/) *(Replace this URL with your EC2 instance's URL or IP address)*
+
+### Test User Credentials
+- **Username**: `Senyai_bark@hotmail.com` 
+- **Password**: `loveDogs88`
+
+*Note: For security reasons, do not use real credentials in documentation. Ensure to change them immediately if they are real and consider implementing a demo account with limited privileges for showcasing.*
+
+## Features and Functionalities
+
+- **User Authentication**: Securely log in to access personalized features.
+- **Playlist Management**: Create and manage your playlists with ease.
+- **Audio Playback**: Enjoy seamless streaming of your favorite tracks.
+
+We hope you relish the melodious journey with Lollipop Music!
