@@ -1,0 +1,21 @@
+name: Lollipop Music Accessibility
+
+on:
+  schedule:
+    - cron: '0 0 1 1 *'
+  workflow_dispatch:
+
+jobs:
+  availability-check:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Check website
+      run: |
+        response=$(curl -o /dev/null -s -w "%{http_code}\n" http://52.77.69.103/)
+        if [ "$response" != "200" ]; then
+          echo "Website is not available (Status code: $response)"
+          exit 1
+        else
+          echo "Website is available (Status code: $response)"
+        fi
