@@ -1,5 +1,7 @@
 # Lollipop Music Project
 
+[![Lollipop Music Accessibility](https://github.com/Waariss/Lollipop_Music_Project/actions/workflows/main.yml/badge.svg)](https://github.com/Waariss/Lollipop_Music_Project/actions/workflows/main.yml)
+
 ## Introduction
 
 Lollipop Music is a music application developed as part of the ITCS212_Web Programming project at the Faculty of Information and Communication Technology, ICT Mahidol. This application was developed with a keen interest in music and technology, utilizing React for the frontend and Node.js for the backend. Lollipop Music features a user-friendly interface, user authentication, playlist management, and audio playback.
